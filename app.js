@@ -4,21 +4,24 @@ const currentPrice=document.querySelector("#current-price");
 const btn=document.querySelector("#submit-btn");
 const op=document.querySelector("#output-box");
 
-function calculatePNL(initial_price, current_price , no_of_stocks)
+function calculatePNL(initial, current , quantity)
 {
-    if(current_price<initial_price)
+    if(current<initial)
     {//loss report 
-        var loss=(initial_price-current_price)*no_of_stocks;
-        var percent=(loss/initial_price)*100;
+        var loss=(initial-current)*quantity;
+        var percent=(loss/initial)*100;
         console.log(`Hey the loss is ${loss} and the percent is ${percent}%`);
     }
-    else if(current_price>initial_price)
+    else if(current>initial)
     {   //profit report
-        var profit=(current_price-initial_price)*no_of_stocks;
-        var percent=(profit/initial_price)*100;
+        var profit=(current-initial)*quantity;
+        var percent=(profit/initial)*100;
         console.log(`Hey the profit is ${profit} and the percent is ${percent}%`);    
     }
     else{
         console.log(`No pain , no gain `);
     }
 }
+
+calculatePNL(50,150,10);
+calculatePNL(20,100,10);
