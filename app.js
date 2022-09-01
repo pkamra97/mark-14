@@ -11,14 +11,14 @@ function calculatePNL(initial, current , quantity)
         if(current<initial)
     {//loss report 
         var loss=(initial-current)*quantity;
-        var percent=(loss/initial)*100;
-        showOutput(`Hey the loss is ${loss} and the percent is ${percent}%`);
+        var losspercent=(loss/initial)*100;
+        showOutput(`Hey the loss is ${loss} and the percent is ${losspercent}%`);
     }
     else if(current>initial)
     {   //profit report
         var profit=(current-initial)*quantity;
-        var percent=(profit/initial)*100;
-        showOutput(`Hey the profit is ${profit} and the percent is ${percent}%`);    
+        var profitpercent=(profit/initial)*100;
+        showOutput(`Hey the profit is ${profit} and the percent is ${profitpercent}%`);    
     }
     else{
         showOutput(`No pain , no gain `);
