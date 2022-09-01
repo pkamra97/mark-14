@@ -6,7 +6,9 @@ const output_box=document.querySelector("#output-box");
 
 function calculatePNL(initial, current , quantity)
 {
-    if(current<initial)
+    if(initial && current && quantity)
+{
+        if(current<initial)
     {//loss report 
         var loss=(initial-current)*quantity;
         var percent=(loss/initial)*100;
@@ -21,6 +23,9 @@ function calculatePNL(initial, current , quantity)
     else{
         showOutput(`No pain , no gain `);
     }
+}
+else{ showOutput("Please fill Every box")}
+
 }
 
 // calculatePNL(50,150,10);
@@ -40,6 +45,9 @@ function showOutput(message , status)
 }
 
 function financial(x) {  return Number.parseFloat(x).toFixed(2);  }
+
+// working separtely but not working inside loss and profit 1st doubt 
+console.log(financial(2.8956322) )
   
 
 btn.addEventListener('click',submitBtn);
