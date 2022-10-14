@@ -7,4 +7,4 @@
 
 ### Click below to check the project
 
- [Mark-14 Live]( "https://pkamra97-mark14-game-of-stocks.netlify.app/") 
+ [Mark-14 Live](https://pkamra97-mark14-game-of-stocks.netlify.app/ "click to check live project") 
